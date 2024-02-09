@@ -6,7 +6,7 @@
   ansible.builtin.mount:
     path: "{{ network_mount.path }}"
     src: "{{ network_mount.server }}:{{ network_mount.volume }}"
-    opts: "nofail,ro"
+    opts: "nofail"
     fstype: nfs
     state: mounted
   loop: "{{ network_mounts }}"
