@@ -8,7 +8,7 @@
     src: "{{ network_mount.server }}:{{ network_mount.volume }}"
     opts: "nofail"
     fstype: nfs
-    state: mounted
+    state: present
   loop: "{{ network_mounts }}"
   loop_control:
     loop_var: "network_mount"
